@@ -1,0 +1,1 @@
+SELECT etage.nom , salles.nom AS "Biggest_Room" FROM etage JOIN salles ON id_etage = etage.id ORDER BY capicite DESC LIMIT 1; -- permet de rechercher la salle la plus grande de chaque étage

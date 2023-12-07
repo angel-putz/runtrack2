@@ -1,0 +1,1 @@
+SELECT AVG(capicite) FROM salles;

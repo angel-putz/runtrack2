@@ -1,0 +1,1 @@
+SELECT * FROM `etudiants` WHERE prenom LIKE 'T%'; -- permet de rechercher les prénoms commençant par T 

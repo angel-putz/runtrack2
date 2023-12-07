@@ -1,0 +1,1 @@
+SELECT * FROM etudiants WHERE `naissance` BETWEEN '1998-12-07' AND '2018-12-07'; -- permet de rechercher les étudiants nés entre le 7 décembre 1998 et le 7 décembre 2018
