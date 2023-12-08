@@ -33,7 +33,7 @@ public static function disconnect(){
 
 $pdo = Database::connect();
 
-$sql ="SELECT nom , id_etage FROM salles";
+$sql ="SELECT salles.nom , etage.nom FROM salles JOIN etage ON id_etage= etage.id;";
 ?>
     <table border ='1'>
     <thead>
