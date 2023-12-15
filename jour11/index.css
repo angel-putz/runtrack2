@@ -1,0 +1,75 @@
+/* FILEPATH: /d:/angel/Documents/laragon/www/runtrack2/jour11/index.css */
+
+/* Styles pour le formulaire d'inscription */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="submit"] {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0f1057;
+}
+
+
+
+/* Styles pour la page d'index */
+h1 {
+  
+  color: #4CAF50;
+  text-align: center;
+  text-decoration: underline;
+}
+.animation {
+  color: #4CAF50;
+  text-align: center;
+  text-decoration: underline;
+}
+nav {
+  margin: 45%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+.animation{                                     
+  animation: 2s linear 0.1s 1 running slidein;
+  animation-name: slidein;
+  
+}
+@keyframes slidein {
+  from {
+    transform: translate(12px, 50%);
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+
+/* Styles pour la page d'admin */
+table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  border: 1px solid black;
+  width: 50%;
+  background-color: rgb(121, 121, 198);
+  border-color: #0f1057;
+}

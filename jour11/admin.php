@@ -55,8 +55,11 @@ $pdo = Database::disconnect();
 
 <!DOCTYPE html>
 <html>
+<head>
+        <link rel="stylesheet" href="index.css">
+    </head>
 <body>
-<table>
+<table border ='1' >
     <tr>
         <th>ID</th>
         <th>Prénom</th>

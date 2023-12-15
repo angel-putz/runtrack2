@@ -37,10 +37,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //si la méthode de requête est POS
     $login = $_POST["login"]; //on récupère le login
     $password = $_POST["password"]; //on récupère le password
     $pdo = Database::connect(); //on se connecte à la BDD
-    // Assuming you have a PDO instance $db
+
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION); //on définit le mode d'erreur de PDO
     $stmt = $pdo->prepare("SELECT * FROM utilisateur WHERE login = '$login' AND password = '$password'"); //on prépare la requête SQL pour récupérer le login et le password de l'utilisateur connecté
-   // var_dump($stmt);
+
     $stmt->execute(); //on exécute la requête SQL pour récupérer le login et le password de l'utilisateur connecté
     $user = $stmt->fetch(PDO::FETCH_ASSOC); //on récupère les résultats de la requête SQL pour récupérer le login et le password de l'utilisateur connecté
 
@@ -50,8 +50,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //si la méthode de requête est POS
 
     if (isset($_POST["login"])) {
 
-//    var_dump('login',$login);
-  //  var_dump('pass',$password);
         if ($login == $admin and $password == $admin) { //si le login et le password sont égaux à admin on redirige vers la page admin.php
             $_SESSION["login"] == $admin; //on crée une session pour l'admin
             $_SESSION["password"] == $admin; //on crée une session pour l'admin
@@ -70,17 +68,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") { //si la méthode de requête est POS
 }
 
 Database::disconnect();
-//<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>
+?>
 
 
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
 <body>
-<form method="post" action="">
+<form method="post" >
     Login: <input type="text" name="login" required><br>
     Password: <input type="password" name="password" required><br>
     <input type="submit">
-
 </form>
 </body>
 </html>

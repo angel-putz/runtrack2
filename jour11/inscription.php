@@ -54,21 +54,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 
 
-
-
-
-
-
-
 ?>
 
 <!DOCTYPE html>
 <html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
 <body>
 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
-    login: <input type="text" name="login" required><br>
-    prenom: <input type="text" name="prenom" required><br>
-    nom: <input type="text" name="nom" required><br>
+    Login: <input type="text" name="login" required><br>
+    Prenom: <input type="text" name="prenom" required><br>
+    Nom: <input type="text" name="nom" required><br>
     Password: <input type="password" name="password" required><br>
     Confirm Password: <input type="password" name="confirm_password" required><br>
     <input type="submit">
