@@ -17,6 +17,10 @@
 
 
 <?php
+$hauteur="";
+$largeur="";
+
+
 
 $largeur = $_POST["largeur"];
 $hauteur = $_POST["hauteur"];
@@ -46,20 +50,6 @@ echo $texte;
 echo'<br>';
 }
 
-/*
-for ($h = 1; $h <= $hauteur; $h++) {
-    for ($f = 1; $f <= $largeur; $f++) {
-        // Afficher le caractère vertical "|" pour les bords, et "_" pour l'intérieur
-        if ($h == 1 || $f == 1 ) {
-            echo '|';
-        } else {
-            echo '_';
-        }
-    }
-    // Passer à la ligne après chaque ligne du rectangle
-    echo '<br>';
-}s
-*/
 
 echo '<div style="width: ' . $largeur*4 . 'vh; height: ' . $hauteur*4 . 'vh; border: 1px dashed black;">';
 ?>

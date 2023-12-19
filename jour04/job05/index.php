@@ -20,6 +20,10 @@
 </html>
 
 <?php
+$username1="";
+$password="";
+
+
 $username1 = htmlspecialchars($_POST["username"]);
 $password = htmlspecialchars($_POST["password"]);
 

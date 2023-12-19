@@ -17,9 +17,9 @@
 
 
 
-
 <?php
-
+$prenom="";
+$nom="";
 
 echo"<table border ='1'>
     <thead>

@@ -15,6 +15,7 @@
 </html>
 
 <?php
+$name="";  
 
 $name=count($_POST);
 echo 'Hello ' . $name . '!';

@@ -7,13 +7,15 @@
 </head>
 <body>
     <form method="post">
-        <input type ="nomber" name ="nombre"/>
+        <label for="nombre">Nombre</label><br>
+        <input type ="nomber" id="nombre" name ="nombre"/>
         <input type="submit" value="envoye" />
     </form>
 </body>
 </html>
 
 <?php
+$nombre="";
 
 $nombre = $_POST["nombre"];
 
