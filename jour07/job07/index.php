@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-<form method="post">
+<form method="post"> 
         <select name="style">
             <option value="gras">gras</option>
             <option value="cesar">cesar</option>
@@ -20,7 +20,7 @@
 
 <?php
 
-function cesar($str){
+function cesar($str){ // fonction qui permet de faire un décalage de 1
     $str2= strlen($str);
     for($g=0 ;$g<$str2 ; $g++){
         if($g==$str2 -1){
@@ -33,14 +33,14 @@ function cesar($str){
 }
 
 
-function gras($str){
+function gras($str){ // fonction qui permet de mettre en gras
     echo '<b>'. $str ."</b>";
 }
 
 
 
 
-function plateforme($str) {
+function plateforme($str) {  // fonction qui permet de mettre en minuscule et de remplacer les "me" par "me_"
     $truc = "/me/i";
     $modifiedStr = preg_replace($truc, 'me_', $str);
     echo $modifiedStr;
@@ -49,7 +49,7 @@ function plateforme($str) {
 
 
 
-if(isset($_POST["style"])) {
+if(isset($_POST["style"])) { // permet de vérifier si le formulaire a été envoyé et si le style est bien défini
     $style = $_POST["style"];
     if($style == "gras"){
         gras($_POST["mot"]);
@@ -58,10 +58,9 @@ if(isset($_POST["style"])) {
 
         cesar($_POST["mot"]);
 
-}
-
-if ($style == "plateforme"){
-    plateforme($_POST["mot"]);
+    }
+    if ($style == "plateforme"){
+        plateforme($_POST["mot"]);
 }
 
 }

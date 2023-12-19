@@ -7,6 +7,4 @@ function calcul(){
     $c=$a.$operation.$b." = ".($a+$b);
     return $c;
 }
-
-
 echo calcul();
